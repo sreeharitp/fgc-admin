@@ -2,26 +2,64 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.box-shadow {
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 5px 0px;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-size: 21px;
+  font-family: 'GeneralSans';
+}
+
+label {
+  width: 100%;
+  font-size: 20px;
+}
+
+input {
+  width: 100%;
+  border: 1px solid #bbb;
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  margin-bottom: 0.75rem;
+  outline: none;
+}
+
+table {
+  width: 100%;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 0.5rem 1rem;
+  border: 1px solid #bbb;
+}
+
+.submit {
+  font-size: 22px;
+  width: 100%;
+  font-weight: 500;
+  background-color: #D02102;
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  margin-top: 1rem;
+  color: #fff;
+}
+
+input.arabic {
+  direction: rtl;
+  font-family: Mada Regular;
+}
+
+.arabic {
+  font-family: Mada Regular;
+  font-size: 21px;
+}
+.scrollbar::-webkit-scrollbar{
+display: none;
+}
+
+.submit:disabled {
+  opacity: 0.5;
 }
